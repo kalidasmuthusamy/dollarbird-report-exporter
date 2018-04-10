@@ -47,8 +47,13 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
+    coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    dotenv (2.2.2)
+    dotenv-rails (2.2.2)
+      dotenv (= 2.2.2)
+      railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     ffi (1.9.23)
     globalid (0.4.1)
@@ -75,6 +80,9 @@ GEM
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     puma (3.11.3)
     rack (2.0.4)
     rack-test (1.0.0)
@@ -135,7 +143,9 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
+  dotenv-rails
   listen (>= 3.0.5, < 3.2)
+  pry
   puma (~> 3.11)
   rails (~> 5.2.0)
   spring

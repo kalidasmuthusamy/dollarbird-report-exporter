@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  defaults format: :json do
+    post '/export_report', to: 'application#export_report'
+  end
 end
