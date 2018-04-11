@@ -1,0 +1,12 @@
+---
+:concurrency: 4
+:logfile: ./log/sidekiq.log
+:queues:
+  - default
+# Reload schedule changes
+# Useful to modify scheduled workers from rails console
+:dynamic: true
+:schedule:
+  dollarbird_report_export:
+    cron: '0 * * * * *'
+    class: '::ReportExporter'
