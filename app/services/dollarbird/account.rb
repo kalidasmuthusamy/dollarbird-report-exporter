@@ -10,7 +10,7 @@ module Dollarbird
 
     def authentication_token
       sign_in_response = ::HttpClient.new(
-        "https://api.dollarbird.co/v1/sign-in"
+        ENV.fetch('SIGN_IN_URL')
       ).post do |req|
         req['Accept'] = "application/json"
         req['Content-Type'] = "application/json;charset=UTF-8"

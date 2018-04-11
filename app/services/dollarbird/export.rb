@@ -15,7 +15,7 @@ module Dollarbird
       ).authentication_token
 
       ::HttpClient.new(
-        "https://api.dollarbird.co/v1/export/simple-csv"
+        ENV.fetch('CSV_EXPORT_URL')
       ).post do |req|
         req['Accept'] = "application/json"
         req['Authorization'] = auth_token
