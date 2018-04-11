@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
-require "rails"
+require 'rails'
 # Pick the frameworks you want:
-require "active_job/railtie"
-require "action_controller/railtie"
+require 'active_job/railtie'
+require 'action_controller/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -17,7 +19,7 @@ module DollarbirdReportExporter
     config.time_zone = 'Kolkata'
 
     config.autoload_paths += [
-      Rails.root.join('app', 'services').to_s,
+      Rails.root.join('app', 'services').to_s
     ]
 
     # Settings in config/environments/* take precedence over those specified here.

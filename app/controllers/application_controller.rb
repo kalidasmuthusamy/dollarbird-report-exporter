@@ -1,5 +1,6 @@
-class ApplicationController < ActionController::API
+# frozen_string_literal: true
 
+class ApplicationController < ActionController::API
   def export_report
     initiation_response = Dollarbird::Export.new(
       ENV.fetch('IDENTITY'),
@@ -12,5 +13,4 @@ class ApplicationController < ActionController::API
       render json: initiation_response, status: :unprocessable_entity
     end
   end
-  
 end

@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+
 require 'net/http'
 # Service to make HTTP requests
 class HttpClient
   attr_reader :endpoint,
-    :options
+              :options
 
   def initialize(endpoint, options = {})
     @endpoint = endpoint
