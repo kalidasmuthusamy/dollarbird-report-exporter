@@ -19,7 +19,8 @@ module DollarbirdReportExporter
     config.time_zone = 'Kolkata'
 
     config.autoload_paths += [
-      Rails.root.join('app', 'services').to_s
+      Rails.root.join('app', 'services').to_s,
+      Rails.root.join('app', 'workers').to_s
     ]
 
     # Settings in config/environments/* take precedence over those specified here.
