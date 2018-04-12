@@ -3,8 +3,6 @@
 require_relative 'boot'
 
 require 'rails'
-# Pick the frameworks you want:
-require 'active_job/railtie'
 require 'action_controller/railtie'
 
 # Require the gems listed in Gemfile, including any gems
